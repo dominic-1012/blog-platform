@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Post - Thiranex Blog</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav id="nav"></nav>
+<div class="container">
+  <div id="post-detail"><div class="empty-state">Loading...</div></div>
+
+  <div class="card">
+    <h2 style="font-size:1.1rem; margin-bottom:1rem;">Comments</h2>
+    <div id="comments-container"></div>
+
+    <div id="comment-form-wrapper" style="margin-top:1.5rem;">
+      <div id="comment-error" class="error"></div>
+      <textarea id="comment-content" placeholder="Add a comment..." style="min-height:80px;"></textarea>
+      <button class="primary" onclick="handleAddComment(event)">Post Comment</button>
+    </div>
+  </div>
+</div>
+<script src="js/api.js"></script>
+<script src="js/posts.js"></script>
+<script src="js/post-detail.js"></script>
+<script>
+renderNav();
+loadPost();
+if (!isLoggedIn()) {
+  document.getElementById('comment-form-wrapper').innerHTML = '<p style="text-align:center;"><a href="login.html">Login</a> to leave a comment.</p>';
+}
+</script>
+</body>
+</html>

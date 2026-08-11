@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thiranex Blog</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav id="nav"></nav>
+<div class="container">
+  <div class="card" style="display:flex; gap:0.5rem; align-items:center;">
+    <input id="search" type="text" placeholder="Search posts by title..." style="margin:0;" onkeyup="if(event.key==='Enter') loadPosts()">
+    <button class="primary" style="width:auto; padding:0.7rem 1.2rem;" onclick="loadPosts()">Search</button>
+  </div>
+  <div id="posts-container"><div class="empty-state">Loading posts...</div></div>
+</div>
+<script src="js/api.js"></script>
+<script src="js/posts.js"></script>
+<script>
+renderNav();
+loadPosts();
+</script>
+</body>
+</html>

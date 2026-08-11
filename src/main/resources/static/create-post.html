@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Post - Thiranex Blog</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav id="nav"></nav>
+<div class="container" style="max-width:600px;">
+  <form onsubmit="handleCreatePost(event)">
+    <h1>Write a New Post</h1>
+    <div id="error" class="error"></div>
+    <input id="title" type="text" placeholder="Post title" required>
+    <textarea id="content" placeholder="Write your post..." required></textarea>
+    <button class="primary" type="submit">Publish</button>
+  </form>
+</div>
+<script src="js/api.js"></script>
+<script src="js/posts.js"></script>
+<script>
+renderNav();
+if (!isLoggedIn()) { window.location.href = 'login.html'; }
+</script>
+</body>
+</html>

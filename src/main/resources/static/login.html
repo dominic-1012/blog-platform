@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - Thiranex Blog</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav id="nav"></nav>
+<div class="container" style="max-width:420px;">
+  <form onsubmit="handleLogin(event)">
+    <h1>Login</h1>
+    <div id="error" class="error"></div>
+    <input id="username" type="text" placeholder="Username" required>
+    <input id="password" type="password" placeholder="Password" required>
+    <button class="primary" type="submit">Login</button>
+    <div class="form-link">Don't have an account? <a href="register.html">Register</a></div>
+  </form>
+</div>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script>renderNav();</script>
+</body>
+</html>
